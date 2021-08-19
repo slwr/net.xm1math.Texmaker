@@ -56,3 +56,5 @@ modules:
           version-pattern: DOWNLOAD version ([\d\.]+)
           url-template: https://www.xm1math.net/texmaker/texmaker-$version.tar.bz2
 
+      - type: patch
+        path: patches/remove_u200b.patch
