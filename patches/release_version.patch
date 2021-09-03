@@ -1,0 +1,14 @@
+Fix release date
+Index: texmaker-5.1.2/utilities/texmaker.metainfo.xml
+===================================================================
+--- texmaker-5.1.2.orig/utilities/texmaker.metainfo.xml
++++ texmaker-5.1.2/utilities/texmaker.metainfo.xml
+@@ -39,7 +39,7 @@
+  <project_group>Qt</project_group>
+  <developer_name>Pascal Brachet</developer_name>
+  <releases>
+-   <release version="5.1.2" date="2021-09-19">
++   <release version="5.1.2" date="2021-09-03">
+      <description>
+        <p>Maintenance release</p>
+      </description>

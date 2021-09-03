@@ -6,7 +6,7 @@ base: io.qt.qtwebengine.BaseApp
 base-version: '5.15'
 command: texmaker
 rename-desktop-file: texmaker.desktop
-rename-appdata-file: texmaker.appdata.xml
+rename-appdata-file: texmaker.metainfo.xml
 rename-icon: texmaker
 finish-args:
   - --socket=fallback-x11
@@ -57,4 +57,4 @@ modules:
           url-template: https://www.xm1math.net/texmaker/texmaker-$version.tar.bz2
 
       - type: patch
-        path: patches/remove_u200b.patch
+        path: patches/release_version.patch
