@@ -1,9 +1,9 @@
 app-id: net.xm1math.Texmaker
 runtime: org.kde.Platform
-runtime-version: '5.15'
+runtime-version: '5.15-21.08'
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: '5.15'
+base-version: '5.15-21.08'
 command: texmaker
 rename-desktop-file: texmaker.desktop
 rename-appdata-file: texmaker.metainfo.xml
