@@ -55,6 +55,3 @@ modules:
           url: https://www.xm1math.net/texmaker/download.html
           version-pattern: DOWNLOAD version ([\d\.]+)
           url-template: https://www.xm1math.net/texmaker/texmaker-$version.tar.bz2
-
-      - type: patch
-        path: patches/release_version.patch
