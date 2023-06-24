@@ -13,7 +13,8 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --device=dri
-  - --filesystem=xdg-documents
+  - --filesystem=host # required to open files
+  - --talk-name=org.freedesktop.Flatpak # required for flatpak-spawn --host
   - --env=PATH=/app/texlive/bin/x86_64-linux:/app/texlive/bin/aarch64-linux:/app/bin:/usr/bin  # required to find texlive binaries
   - --env=TEXMFCACHE=$XDG_CACHE_HOME
 cleanup:
@@ -55,3 +56,6 @@ modules:
           url: https://www.xm1math.net/texmaker/download.html
           version-pattern: DOWNLOAD version ([\d\.]+)
           url-template: https://www.xm1math.net/texmaker/texmaker-$version.tar.bz2
+      - type: shell
+        commands:
+          - sed -e 's|_command=config->value("Tools/\([a-zA-Z]*\)","\([a-zA-Z]*\)|_command=config->value("Tools/\1","flatpak-spawn --host \2|g' -i ./texmaker.cpp
