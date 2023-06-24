@@ -13,7 +13,8 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --device=dri
-  - --filesystem=xdg-documents
+  - --filesystem=host # required to open files
+  - --talk-name=org.freedesktop.Flatpak # required for flatpak-spawn --host
   - --env=PATH=/app/texlive/bin/x86_64-linux:/app/texlive/bin/aarch64-linux:/app/bin:/usr/bin  # required to find texlive binaries
   - --env=TEXMFCACHE=$XDG_CACHE_HOME
 cleanup:
